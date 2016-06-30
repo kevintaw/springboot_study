@@ -54,4 +54,5 @@ public class PageController {
         model.addAttribute("content", hello + "（第二种）");
         return "page/page1";
     }
+
 }

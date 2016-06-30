@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
  * Created by kevin on 16-6-30.
  */
 
+
 @Component
 @ConfigurationProperties(prefix = "author")
 public class AuthorSettings {
