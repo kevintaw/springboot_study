@@ -1,5 +1,7 @@
 package com.kevin.springboot_study.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,6 +18,8 @@ import java.util.Map;
 @RequestMapping("/hello")
 public class HelloController {
 
+    private static final Logger logger = LoggerFactory.getLogger(HelloController.class);
+
     @RequestMapping
     public String hello() {
         return "Hello Spring-Boot";
@@ -25,6 +29,7 @@ public class HelloController {
     public Map<String, String> getInfo(@RequestParam String name) {
         Map<String, String> map = new HashMap<>();
         map.put("name", name);
+        logger.debug("日志输出测试 Info");
         return map;
     }
 
