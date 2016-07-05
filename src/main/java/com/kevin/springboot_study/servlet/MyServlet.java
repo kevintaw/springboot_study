@@ -11,7 +11,7 @@ import java.io.PrintWriter;
 /**
  * Created by kevin on 16-6-30.
  */
-@WebServlet(urlPatterns = "/xs/", description = "Servlet的说明")
+@WebServlet(urlPatterns = "/xs/*", description = "Servlet的说明")
 public class MyServlet extends HttpServlet {
 
     @Override
